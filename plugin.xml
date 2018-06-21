@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns="http://phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.qapint.cordova.pdf-viewer"
+    version="1.0.0">
+  <engines>
+    <engine name="cordova" version=">=3.3.0" />
+  </engines>
+
+  <name>PDF Viewer</name>
+  <description>View PDF documents on Cordova projects</description>
+
+  <js-module src="www/pdf-viewer.js" name="PdfViewer">
+    <clobbers target="window.PdfViewer" />
+  </js-module>
+
+  <platform name="android">
+    <source-file src="src/android/src/Annotation.java" target-dir="src/com/artifex/mupdfviewer" />
+		<source-file src="src/android/src/ArrayDeque.java" target-dir="src/com/artifex/mupdfviewer" />
+		<source-file src="src/android/src/AsyncTask.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/ChoosePDFActivity.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/ChoosePDFAdapter.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/ChoosePDFItem.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/Deque.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/FilePicker.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/LinkInfo.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/LinkInfoExternal.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/LinkInfoInternal.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/LinkInfoRemote.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/LinkInfoVisitor.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/MuPDFActivity.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/MuPDFAlert.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/MuPDFAlertInternal.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/MuPDFCore.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/MuPDFPageAdapter.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/MuPDFPageView.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/MuPDFReaderView.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/MuPDFReflowAdapter.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/MuPDFReflowView.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/MuPDFView.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/OutlineActivity.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/OutlineActivityData.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/OutlineAdapter.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/OutlineItem.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/PageView.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/PdfViewer.java" target-dir="src/com/qapint/cordova/pdfviewer" />
+    <source-file src="src/android/src/PrintDialogActivity.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/ReaderView.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/SafeAnimatorInflater.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/SearchTask.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/SearchTaskResult.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/Stepper.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/TextChar.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/TextWord.java" target-dir="src/com/artifex/mupdfviewer" />
+    <source-file src="src/android/src/WidgetType.java" target-dir="src/com/qapint/cordova/pdfviewer" />
+		
+		<source-file src="src/android/libs/armeabi/libmupdf.so" target-dir="libs/armeabi"/>
+		<source-file src="src/android/libs/armeabi-v7a/libmupdf.so" target-dir="libs/armeabi-v7a"/>
+		<source-file src="src/android/libs/mips/libmupdf.so" target-dir="libs/mips"/>
+		<source-file src="src/android/libs/x86/libmupdf.so" target-dir="libs/x86"/>
+		
+		<source-file src="src/android/res/animator/info.xml" target-dir="res/animator"/>
+		<source-file src="src/android/res/drawable/busy.xml" target-dir="res/drawable"/>
+		<source-file src="src/android/res/drawable/button.xml" target-dir="res/drawable"/>
+		<source-file src="src/android/res/drawable/darkdenim3.png" target-dir="res/drawable"/>
+		<source-file src="src/android/res/drawable/page_num.xml" target-dir="res/drawable"/>
+		<source-file src="src/android/res/drawable/search.xml" target-dir="res/drawable"/>
+		<source-file src="src/android/res/drawable/seek_progress.xml" target-dir="res/drawable"/>
+		<source-file src="src/android/res/drawable/seek_thumb.xml" target-dir="res/drawable"/>
+		<source-file src="src/android/res/drawable/tiled_background.xml" target-dir="res/drawable"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_annot.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_annotation.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_arrow_left.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_arrow_right.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_cancel.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_check.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_clipboard.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_dir.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_doc.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_highlight.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_link.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_list.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_magnifying_glass.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_more.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_pen.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_print.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_reflow.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_select.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_share.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_strike.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_trash.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_underline.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-ldpi/ic_updir.png" target-dir="res/drawable-ldpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_annot.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_annotation.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_arrow_left.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_arrow_right.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_arrow_up.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_cancel.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_check.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_clipboard.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_dir.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_doc.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_highlight.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_link.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_list.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_magnifying_glass.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_more.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_pen.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_print.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_reflow.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_select.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_share.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_strike.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_trash.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/drawable-mdpi/ic_underline.png" target-dir="res/drawable-mdpi"/>
+		<source-file src="src/android/res/layout/buttons.xml" target-dir="res/layout"/>
+		<source-file src="src/android/res/layout/main.xml" target-dir="res/layout"/>
+		<source-file src="src/android/res/layout/outline_entry.xml" target-dir="res/layout"/>
+		<source-file src="src/android/res/layout/picker_entry.xml" target-dir="res/layout"/>
+		<source-file src="src/android/res/layout/print_dialog.xml" target-dir="res/layout"/>
+		<source-file src="src/android/res/layout/textentry.xml" target-dir="res/layout"/>
+		
+    <config-file target="res/values/strings.xml" parent="/resources">
+			<string name="version">1.5 (git build)</string>
+			<string name="no_media_warning">Storage media not present</string>
+			<string name="no_media_hint">Sharing the storage media with a PC can make it inaccessible</string>
+			<string name="cancel">Cancel</string>
+			<string name="search_backwards">Search backwards</string>
+			<string name="search_forwards">Search forwards</string>
+			<string name="search_document">Search document</string>
+			<string name="picker_title_App_Ver_Dir">%1$s %2$s: %3$s</string>
+			<string name="outline_title">Table of Contents</string>
+			<string name="enter_password">Enter password</string>
+			<string name="text_not_found">Text not found</string>
+			<string name="searching_">Searching&#8230;</string>
+			<string name="toggle_links">Highlight and enable links</string>
+			<string name="no_further_occurrences_found">No further occurrences found</string>
+			<string name="select">Select</string>
+			<string name="search">Search</string>
+			<string name="copy">Copy</string>
+			<string name="strike_out">Strike-out</string>
+			<string name="delete">Delete</string>
+			<string name="highlight">Highlight</string>
+			<string name="underline">Underline</string>
+			<string name="edit_annotations">Edit annotations</string>
+			<string name="ink">Ink</string>
+			<string name="save">Save</string>
+			<string name="print">Print</string>
+			<string name="dismiss">Dismiss</string>
+			<string name="parent_directory">[Up one level]</string>
+			<string name="yes">Yes</string>
+			<string name="no">No</string>
+			<string name="entering_reflow_mode">Entering reflow mode</string>
+			<string name="leaving_reflow_mode">Leaving reflow mode</string>
+			<string name="print_failed">Print failed</string>
+			<string name="select_text">Select text</string>
+			<string name="copied_to_clipboard">Copied to clipboard</string>
+			<string name="no_text_selected">No text selected</string>
+			<string name="draw_annotation">Draw annotation</string>
+			<string name="nothing_to_save">Nothing to save</string>
+			<string name="document_has_changes_save_them_">Document has changes. Save them?</string>
+			<string name="cannot_open_document">Cannot open document</string>
+			<string name="cannot_open_document_Reason">Cannot open document: %1$s</string>
+			<string name="cannot_open_file_Path">Cannot open file: %1$s</string>
+			<string name="cannot_open_buffer">Cannot open buffer</string>
+			<string name="fill_out_text_field">Fill out text field</string>
+			<string name="okay">Okay</string>
+			<string name="choose_value">Choose value</string>
+			<string name="not_supported">Not supported</string>
+			<string name="copy_text_to_the_clipboard">Copy text to the clipboard</string>
+			<string name="more">More</string>
+			<string name="accept">Accept</string>
+			<string name="copy_text">copy text</string>
+			<string name="format_currently_not_supported">Format currently not supported</string>
+			<string name="toggle_reflow_mode">Toggle reflow mode</string>
+    </config-file>
+
+		<config-file target="res/values/colors.xml" parent="/resources">
+			<color name="canvas">#404040</color>
+			<color name="toolbar">#C0000000</color>
+			<color name="page_indicator">#C0202020</color>
+			<color name="busy_indicator">#C0202020</color>
+			<color name="button_normal">#00000000</color>
+			<color name="button_pressed">#FF2572AC</color>
+			<color name="text_normal">#FFFFFF</color>
+			<color name="text_pressed">#FFFFFF</color>
+			<color name="text_border_normal">#000000</color>
+			<color name="text_border_pressed">#2572AC</color>
+			<color name="text_border_focused">#000000</color>
+			<color name="seek_thumb">#2572AC</color>
+			<color name="seek_progress">#FFFFFF</color>
+		</config-file>
+
+		<config-file target="res/values/styles.xml" parent="/resources">
+			<style name="AppBaseTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+				<item name="android:windowBackground">@drawable/tiled_background</item>
+			</style>
+		</config-file>
+
+    <config-file target="res/xml/config.xml" parent="/widget">
+      <feature name="PdfViewer">
+        <param name="android-package" value="com.qapint.cordova.pdfviewer.PdfViewer"/>
+      </feature>
+    </config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity android:label="@string/app_name" android:name="com.artifex.mupdfviewer.MuPDFActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+			</activity>
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+			<uses-permission android:name="android.permission.INTERNET" />
+		</config-file>
+  </platform>
+
+  <platform name="ios">
+		<header-file src="src/ios/PdfViewer.h"/>
+    <source-file src="src/ios/PdfViewer.m"/>
+		<header-file src="src/ios/PDFViewController.h"/>
+    <source-file src="src/ios/PDFViewController.m"/>
+		
+		<resource-file src="src/ios/PDFViewController.xib" />
+		<resource-file src="src/ios/PDFViewController_iPhone.xib" />
+		
+    <config-file target="config.xml" parent="/widget">
+      <feature name="PdfViewer">
+        <param name="ios-package" value="PdfViewer"/>
+      </feature>
+    </config-file>
+  </platform>
+</plugin>
